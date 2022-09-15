@@ -9,11 +9,7 @@ guessAtempts = []
 leftToGuess = list(wordToGuess)
 wordToDisplay = list("_" * len(wordToGuess))
 
-while True:
-
-	if atemptsLeft == 10:
-		print("\033c", end="")
-
+def display(wordToDisplay, guessAtempts, atemptsLeft):
 	print(
 		f"""
 		.______   .______       __   _______   _______  _______ 
@@ -30,6 +26,13 @@ while True:
 	print("---------------------------------------------------"+ "".join("-----" * len(guessAtempts)))
 	print("|-- previous guesses : {} --|--  atempts left: {} --|".format(guessAtempts, atemptsLeft))
 	print("---------------------------------------------------"+ "".join("-----" * len(guessAtempts)))
+
+while True:
+
+	if atemptsLeft == 10:
+		print("\033c", end="")
+
+	display(wordToDisplay, guessAtempts, atemptsLeft)
 
 	userInput = input("guess a letter: ")
 
