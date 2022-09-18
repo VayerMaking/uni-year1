@@ -1,0 +1,72 @@
+.center {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    padding: 10px;
+    width: 50%;
+}
+
+.separated {
+    margin: 30px 0px 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+body {
+    background-color: #F4ECCF;
+}
+
+#wordDisplay {
+    font-size: 45px;
+    background-color: #f1de9b !important;
+    width: 45%;
+}
+
+#bridgeImage {
+    padding: 20px;
+}
+
+#inputField {
+    background-color: #D9D9D9;
+    width: 30%;
+    font-size: 30px;
+}
+
+#checkButton {
+    background-color: #50B8C7;
+    font-size: 30px;
+    width: 250px;
+    height: 60px;
+    margin: 0px !important;
+    border-radius: 10px;
+}
+
+#inputField {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    text-align: center;
+}
+  
+#inputField:focus {
+    border: 3px solid #252114;
+}
+
+#manualButton {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+  }
