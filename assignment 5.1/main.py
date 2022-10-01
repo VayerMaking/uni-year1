@@ -4,8 +4,6 @@ import csv
 import pandas as pd
  
 app = Flask(__name__) 
-statistics = None 
-... 
  
 @app.route("/") 
 def index(): 
@@ -20,13 +18,7 @@ def index():
         "max_humidity" : data["humidity"].max()
     }
 
-    print(statistics)
-
-    latest_data = data.iloc[-1]  
-
-    print(latest_data)
-
-    return render_template('index.html', latest_data=latest_data, statistics=statistics)
+    return render_template('index.html', latest_data=data.iloc[-1], statistics=statistics)
 
 @app.route("/post_data", methods=['POST'])
 def post_data():
