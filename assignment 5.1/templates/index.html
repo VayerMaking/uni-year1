@@ -1,0 +1,20 @@
+{% if statistics != None %} 
+   <div>
+    <div>
+        <h1>lastest readings</h1>
+        <p>timestamp: {{ latest_data['timestamp'] }}</p> 
+        <p>temperature: {{ latest_data['temperature'] }}</p> 
+        <p>humidity: {{ latest_data['humidity'] }}</p> 
+        <p>device: {{ latest_data['device'] }}</p> 
+    </div>
+    <div>
+        <h1>statistics</h1>
+        <p>type----|----temperature----|----humidity</p>
+        <p>avg-----|--------{{ statistics['avg_temperature'] }}-------|----{{ statistics['avg_humidity'] }}</p>
+        <p>min-----|--------{{ statistics['min_temperature'] }}-------|----{{ statistics['min_humidity'] }}</p>
+        <p>max-----|--------{{ statistics['max_temperature'] }}-------|----{{ statistics['max_humidity'] }}</p>
+    </div>
+</div>
+{% else %} 
+    <p> No data available </p> 
+{% endif %} 
